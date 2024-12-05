@@ -1,0 +1,20 @@
+F0 0A 00 00  ; LD V0, K
+3A 00 12 00  ; SE V0, 0xA / JP wait_first
+F1 0A 00 00  ; LD V1, K
+3A 01 12 04  ; SE V1, 0xA / JP wait_second
+82 04        ; ADD V2, V0
+82 14        ; ADD V2, V1
+A0 14        ; LD I, sprite_data
+F2 33        ; LD B, V2
+F0 65        ; LD V0, [I]
+D3 45        ; DRW V3, V4, 5
+F0 90 90 90 F0  ; Digit sprites...
+20 60 20 20 70
+F0 10 F0 80 F0
+F0 10 F0 10 F0
+90 90 F0 10 10
+F0 80 F0 10 F0
+F0 80 F0 90 F0
+F0 10 20 40 40
+F0 90 F0 90 F0
+F0 90 F0 10 F0

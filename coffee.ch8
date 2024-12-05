@@ -1,0 +1,47 @@
+; Program instructions (starting at 0x200)
+00E0                ; Clear the screen
+6100                ; Set V1 = 0 (X position)
+6200                ; Set V2 = 10 (Y position, moved down a bit)
+
+; Display the character 'C'
+6C0C                ; Set V12 = 12 (hexadecimal for 'C')
+FC29                ; Set I = location of sprite for 'C'
+D125                ; Display sprite at (V1, V2), height=5
+
+7108                ; V1 += 8 (move right by sprite width)
+
+; Display the character '0'
+6C00                ; Set V12 = 0 (hexadecimal for '0')
+FC29                ; Set I = location of sprite for '0'
+D125                ; Display sprite at (V1, V2), height=5
+
+7108                ; V1 += 8
+
+; Display the character 'F'
+6C0F                ; Set V12 = 15 (hexadecimal for 'F')
+FC29                ; Set I = location of sprite for 'F'
+D125                ; Display sprite at (V1, V2), height=5
+
+7108                ; V1 += 8
+
+; Display the character 'F'
+6C0F                ; Set V12 = 15 (hexadecimal for 'F')
+FC29                ; Set I = location of sprite for 'F'
+D125                ; Display sprite at (V1, V2), height=5
+
+7108                ; V1 += 8
+
+; Display the character 'E'
+6C0E                ; Set V12 = 14 (hexadecimal for 'E')
+FC29                ; Set I = location of sprite for 'E'
+D125                ; Display sprite at (V1, V2), height=5
+
+7108                ; V1 += 8
+
+; Display the character 'E'
+6C0E                ; Set V12 = 14 (hexadecimal for 'E')
+FC29                ; Set I = location of sprite for 'E'
+D125                ; Display sprite at (V1, V2), height=5
+
+12FE                ; Infinite loop
+

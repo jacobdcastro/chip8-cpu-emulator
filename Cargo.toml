@@ -1,0 +1,8 @@
+[package]
+name = "chip8-cpu-emulator"
+version = "0.1.0"
+authors = ["Jacob D. Castro <jacob@xiv.systems>"]
+
+[dependencies]
+rand = "0.8.5"
+minifb = "0.24"
