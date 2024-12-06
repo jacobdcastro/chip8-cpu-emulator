@@ -70,12 +70,12 @@ impl CPU {
         let op_minor = (opcode & 0x000F) as u8;
         let addr = opcode & 0x0FFF;
 
-        println!("opcode: {:04x}", opcode);
-        println!("heap: {:?}", self.heap);
+        // println!("opcode: {:04x}", opcode);
+        // println!("heap: {:?}", self.heap);
 
         self.program_counter += 2;
 
-        println!("program_counter: {}", self.program_counter);
+        // println!("program_counter: {}", self.program_counter);
 
         match opcode {
             0x0000 => return,                    // Shut down the entire process
